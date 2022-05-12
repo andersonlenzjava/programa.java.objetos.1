@@ -4,7 +4,7 @@ package cursojava.classes;
 public class Aluno {
 
 	private String nome;
-	private int idade;
+	private Integer idade;
 	private String dataNascimento;
 	private String registroGeral;
 	private String numeroCpf;
@@ -21,7 +21,7 @@ public class Aluno {
 
 	}
 
-	public Aluno(String nomePadrao, int idadePadrao) {
+	public Aluno(String nomePadrao, Integer idadePadrao) {
 		nome = nomePadrao;
 		idade = idadePadrao;
 	}
@@ -34,11 +34,11 @@ public class Aluno {
 		this.nome = nome;
 	}
 
-	public int getIdade() {
+	public Integer getIdade() {
 		return idade;
 	}
 
-	public void setIdade(int idade) {
+	public void setIdade(Integer idade) {
 		this.idade = idade;
 	}
 
@@ -143,8 +143,8 @@ public class Aluno {
 		}else {
 			return false;
 		}
-		
 	}	
+		
 	/* Normalmente é usado boolean, string fica mais para telas */
 	public String getAlunoAprovado2() {
 		double media = this.getMediaNota();
