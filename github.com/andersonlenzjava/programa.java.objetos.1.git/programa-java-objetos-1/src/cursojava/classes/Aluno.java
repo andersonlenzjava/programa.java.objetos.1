@@ -2,7 +2,7 @@ package cursojava.classes;
 
 /* Classe é uma forma que representa o aluno */
 public class Aluno {
-	
+
 	private String nome;
 	private int idade;
 	private String dataNascimento;
@@ -12,12 +12,16 @@ public class Aluno {
 	private String nomePai;
 	private String dataMatricula;
 	private String nomeEscola;
-	
+	private double nota1;
+	private double nota2;
+	private double nota3;
+	private double nota4;
+
 	public Aluno() {
-		
+
 	}
-	
-	public Aluno (String nomePadrao, int idadePadrao) {
+
+	public Aluno(String nomePadrao, int idadePadrao) {
 		nome = nomePadrao;
 		idade = idadePadrao;
 	}
@@ -94,7 +98,61 @@ public class Aluno {
 		this.nomeEscola = nomeEscola;
 	}
 
-	
+	public double getNota1() {
+		return nota1;
+	}
 
-	
+	public void setNota1(double nota1) {
+		this.nota1 = nota1;
+	}
+
+	public double getNota2() {
+		return nota2;
+	}
+
+	public void setNota2(double nota2) {
+		this.nota2 = nota2;
+	}
+
+	public double getNota3() {
+		return nota3;
+	}
+
+	public void setNota3(double nota3) {
+		this.nota3 = nota3;
+	}
+
+	public double getNota4() {
+		return nota4;
+	}
+
+	public void setNota4(double nota4) {
+		this.nota4 = nota4;
+	}
+
+	/* Método get com retorno de um double com o cálculo da média do aluno */
+	public double getMediaNota() {
+		return (nota1 + nota2 + nota3 + nota4) / 4;
+	}
+
+	/* Chamo o método dentro do proprio método */
+	public boolean getAlunoAprovado() {
+		double media = this.getMediaNota();
+		if (media >= 70) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}	
+	/* Normalmente é usado boolean, string fica mais para telas */
+	public String getAlunoAprovado2() {
+		double media = this.getMediaNota();
+		if (media >= 70) {
+			return "Aluno está aprovado";
+		} else {
+			return "Aluno está reprovado";
+		}
+	}
+
 }
